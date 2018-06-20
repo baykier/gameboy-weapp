@@ -1,0 +1,21 @@
+<!--pages/home/home.wxml-->
+<view class="container">
+  <image class='title' src="../../utils/img/title.png"></image>
+  <view class="handle-circle">
+    <view class='inner-circle'></view>
+    <image class='icon top-icon' src='../../utils/img/top-icon.png' data-name='top' bindtap="handleCircle"></image>
+    <image class='icon bottom-icon' src='../../utils/img/bottom-icon.png' data-name='bottom' bindtap="handleCircle"></image>
+    <image class='icon left-icon' src='../../utils/img/left-icon.png' data-name='left' bindtap="handleCircle"></image>
+    <image class='icon right-icon' src='../../utils/img/right-icon.png' data-name='right' bindtap="handleCircle"></image>
+  </view>
+  <view class='middle'>
+    <image class='game-btn start-btn' src='../../utils/img/start.png' data-name='start' bindtap="handleGameBtn"></image>
+    <image class='game-btn select-btn' src='../../utils/img/select.png' data-name='select' bindtap="handleGameBtn"></image>
+  </view>
+  <view class="handle-btns">
+    <image class='btn' src='../../utils/img/yellow.png'></image>
+    <image class='btn' src='../../utils/img/green.png'></image>
+    <image class='btn' src='../../utils/img/yellow.png'></image>
+    <image class='btn' src='../../utils/img/green.png'></image>
+  </view>
+</view>
