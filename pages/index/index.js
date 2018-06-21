@@ -2,6 +2,7 @@
 //获取应用实例
 const app = getApp()
 const io = require('../../utils/js/weapp.socket.io.js')
+app.globalData.socket = io('http://127.0.0.1:3000');
 
 Page({
   data: {    
@@ -21,9 +22,9 @@ Page({
       scanType:['qrCode'],
       success: (res) => {
         console.log(res);
-        var socket = io('http://192.168.11.191:3000');
+        
         res.openid = app.globalData.openid;
-        socket.emit('user join',res)
+        app.globalData.socket.emit('user join',res)
         wx.redirectTo({
           url: "../home/home"
         })

@@ -1,4 +1,5 @@
 // pages/home/home.js
+const app = getApp();
 Page({
 
   /**
@@ -7,20 +8,14 @@ Page({
   data: {
   
   },
-  handleCircle(e) {
-    wx.showToast({
-      title: e.target.dataset.name,
-      icon: 'success',
-      duration: 2000
-    })
-  },
-  handleGameBtn(e){
-    wx.showToast({
-      title: e.target.dataset.name,
-      icon: 'success',
-      duration: 2000
-    }) 
-  },
+  tapStart:(e) => {
+    console.log('keydown'+e.target.dataset.key)
+    app.globalData.socket.emit('user control', { type: 'keydown', keyCode: e.target.dataset.key });
+  }, 
+  tapEnd: (e) => {
+    console.log('keyup' + e.target.dataset.key)
+    app.globalData.socket.emit('user control', { type: 'keyup', keyCode: e.target.dataset.key});
+  }, 
   /**
    * 生命周期函数--监听页面加载
    */

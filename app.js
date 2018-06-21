@@ -12,7 +12,7 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         var that = this;
         wx.request({
-          url: 'http://192.168.11.191:3000/code',
+          url: 'http://127.0.0.1:3000/code',
           data:{
             code: res.code
           },
@@ -46,6 +46,7 @@ App({
   },
   globalData: {
     userInfo: null,
-    openid:null
+    openid:null,
+    socket: null
   }
 })
