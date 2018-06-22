@@ -21,13 +21,23 @@ Page({
       onlyFromCamera: true,
       scanType:['qrCode'],
       success: (res) => {
-        console.log(res);
-        
+        console.log(res);        
         res.openid = app.globalData.openid;
-        app.globalData.socket.emit('user join',res)
-        wx.redirectTo({
-          url: "../home/home"
+        app.globalData.socket.emit('user join',res,(msg) => {
+          if (msg == 'success'){
+            wx.redirectTo({
+              url: "../home/home"
+            })
+          }else{
+            wx.showToast({
+              title: '二维码已过期',
+              icon: 'loading',
+              duration: 3000,
+              mask: false
+            })
+          }
         })
+       
       }
     })
   }
