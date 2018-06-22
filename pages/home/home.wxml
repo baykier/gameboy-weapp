@@ -1,24 +1,24 @@
 <!--pages/home/home.wxml-->
-<view class="container">
-  <image class='title' src="../../utils/img/title.png"></image>
+<view class='container'>
+<image class='bg' src='../../utils/img/bg.jpg'></image>
+<view class="content">
   <view class="handle-circle">
-    <view class='inner-circle'></view>
-    <image class='icon top-icon' src='../../utils/img/top-icon.png' data-key="37" data-name='up' bindtouchstart="tapStart" bindtouchend='tapEnd'></image>
-    <image class='icon bottom-icon' src='../../utils/img/bottom-icon.png' data-key="39" data-name='down' bindtouchstart="tapStart" bindtouchend='tapEnd'></image>
-    <image class='icon left-icon' src='../../utils/img/left-icon.png' data-key="40" data-name='left' bindtouchstart="tapStart" bindtouchend='tapEnd'></image>
-    <image class='icon right-icon' src='../../utils/img/right-icon.png' data-key="38" data-name='right' bindtouchstart="tapStart" bindtouchend='tapEnd'></image>
+    <image class='icon top-icon' src='../../utils/img/top.png' data-key="37" data-name='left' bindtouchstart="tapStart" bindtouchend="tapEnd"></image>
+    <image class='icon bottom-icon' src='../../utils/img/bt.png' data-key="39" data-name='up' bindtouchstart="tapStart" bindtouchend="tapEnd"></image>
+    <image class='icon left-icon' src='../../utils/img/left.png' data-key="40" data-name='right' bindtouchstart="tapStart" bindtouchend="tapEnd"></image>
+    <image class='icon right-icon' src='../../utils/img/right.png' data-key="38" data-name='down' bindtouchstart="tapStart" bindtouchend="tapEnd"></image>
   </view>
   <view class='middle'>
-    <image class='game-btn start-btn' src='../../utils/img/start.png' data-key="13" data-name='start' bindtouchstart="tapStart" bindtouchend='tapEnd'></image>
-    <image class='game-btn select-btn' src='../../utils/img/select.png' data-key="17"  data-name='select' bindtouchstart="tapStart" bindtouchend='tapEnd'></image>
+    <image class='game-btn start-btn' src='../../utils/img/start.png' data-key="13" data-name='select' bindtouchstart="tapStart" bindtouchend="tapEnd"></image>
+    <image class='game-btn select-btn' src='../../utils/img/select.png' data-key="17" data-name='start' bindtouchstart="tapStart" bindtouchend="tapEnd"></image>
   </view>
   <view class="handle-btns">
-    <image class='btn' data-key="88" data-name="a" src='../../utils/img/yellow.png' bindtouchstart="tapStart" bindtouchend='tapEnd'></image>    
-    <image class='btn' data-key="88" data-name="a" src='../../utils/img/yellow.png' bindtouchstart="tapStart" bindtouchend='tapEnd'></image>
-    <image class='btn' data-key="90" data-name="b" src='../../utils/img/green.png' bindtouchstart="tapStart" bindtouchend='tapEnd'></image>
-    <image class='btn' data-key="90" data-name="a" src='../../utils/img/green.png' bindtouchstart="tapStart" bindtouchend='tapEnd'></image>
+    <image class='btn btn-b' src='../../utils/img/b.png'  data-key="88" bindtouchstart="tapStart" bindtouchend="tapEnd"></image>
+    <image class='btn btn-a' src='../../utils/img/a.png'  data-key="90" bindtouchstart="tapStart" bindtouchend="tapEnd"></image>
   </view>
 </view>
+</view>
+<!--footer-->
 <view class="footer">
   <view class="footer_links">
       <view class="footer_link">baykier</view>
