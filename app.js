@@ -1,4 +1,12 @@
 //app.js
+
+// 初始化socket
+const server = 'http://104.199.255.230:8388'
+//const server = 'http://127.0.0.1:3000'
+const io = require('utils/js/weapp.socket.io.js')
+const socket = io(server);
+
+
 App({
   onLaunch: function () {
     // 展示本地存储能力
@@ -12,7 +20,7 @@ App({
         // 发送 res.code 到后台换取 openId, sessionKey, unionId
         var that = this;
         wx.request({
-          url: 'http://127.0.0.1:3000/code',
+          url: server + '/code',
           data:{
             code: res.code
           },
@@ -46,7 +54,9 @@ App({
   },
   globalData: {
     userInfo: null,
-    openid:null,
-    socket: null
-  }
+    openid:null    
+  },
+  //socket instance
+  socket: socket,
+  server: server
 })

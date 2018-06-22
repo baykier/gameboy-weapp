@@ -1,7 +1,19 @@
 <!--index.wxml-->
 <view class="container">
   <view class="play">
-    <button wx:if="{{canPlay}}" bindtap="playGame">扫码玩游戏</button>
+    <button class="play_button" wx:if="{{canPlay}}" bindtap="scanCode">扫码玩游戏</button>
     <block wx:else>您的手机不支持</block>    
-  </view>  
+  </view>
+  <view class='how'>
+       <view class='how how_title'>如何进行游戏</view>
+       <view class='how how_desc'>
+          首先在浏览器打开游戏首页{{homePage}}.然后点击扫码扫描游戏主页的玩家二维码，进而玩家就可以进行游戏了
+       </view>
+  </view>   
 </view>
+<view class="footer">
+  <view class="footer_links">
+      <view class="footer_link">baykier</view>
+  </view>
+  <view class="footer_text">Copyright © 2008-2016 baykier.github.io</view>
+ </view> 

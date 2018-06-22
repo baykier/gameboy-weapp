@@ -19,3 +19,9 @@
     <image class='btn' data-key="90" data-name="a" src='../../utils/img/green.png' bindtouchstart="tapStart" bindtouchend='tapEnd'></image>
   </view>
 </view>
+<view class="footer">
+  <view class="footer_links">
+      <view class="footer_link">baykier</view>
+  </view>
+  <view class="footer_text">Copyright © 2008-2016 baykier.github.io</view>
+ </view>
